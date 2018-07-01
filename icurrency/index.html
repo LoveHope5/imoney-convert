@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iMonaie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+         <link rel="stylesheet" href="css/custom.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        
+    </head>
+    <body >
+
+  
+    <nav class="uk-background-primary    uk-container    uk-margin">
+        <div class="uk-navbar-left ">
+            <a class=" white uk-navbar-toggle" href="#">
+                <span  uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+            </a>
+             <a href="" class=" white uk-navbar-item uk-logo">iMoney convert</a>
+              <div class="uk-navbar-center-right"><div>...</div></div>
+        </div>
+    </nav>
+    <div id="main" class="uk-container uk-margin" >
+        <form class="uk-grid-small" uk-grid>
+             
+
+                    <legend class="uk-legend">Change Currency From</legend>
+                    <div class="uk-width-1-2@s">
+                        <input class="uk-input" id="input" type="text" placeholder="Amount">
+                    </div>
+                    <div class="uk-width-1-2@s">
+                            <select id="from" class="uk-select " onchange="convertCurrency()">
+                               
+                            </select>
+                    </div>
+                    
+                     <legend class="uk-legend">To</legend>
+                     
+                     <div class="uk-width-1-2@s">
+                            <select id="to" onchange="convertCurrency()" class="uk-select ">
+                               
+                            </select>
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <input id="result" disabled class="uk-input uk-text-bold"  type="text" placeholder="Result">
+                    </div>
+                      <legend class="uk-legend"><button onclick="" class="uk-button uk-button-primary">Convert</button> 
+                     <button class="uk-button uk-button-danger">Reverse</button></legend>
+             
+        </form>
+  
+    </div>
+    <div id="footer" class="uk-container" >
+        <h6>Copyright Love Hope 2018</h6>
+    </div>
+ <script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+</script>
+<script src="js/main.js"></script>
+    </body>
+</html>
